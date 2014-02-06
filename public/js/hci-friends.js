@@ -10,6 +10,21 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$(".friend-name").click(function(e){
+		//preventDefault();
+		e.preventDefault();
+		$(this).text(anagrammedName($(this).text()));
+	});
+}
+
+function projectClick(e) {
+    // prevent the page from reloading 
+    e.preventDefault();
+    // In an event handler, $(this) refers to 
+    // the object that triggered the event 
+    //$("#friend-name").text(anagrammedName($(this).text()));
+   // $("#friend-name").replace("<h1>"+anagrammedName($(this).text())+"</h1>");
+	//$("#friend-name").text(anagrammedName($(this).text()));    
 }
 
 function anagrammedName(name) {
